@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgress
+      - POSTGRES_DB=my_wh_inter
+    ports:
+      - "5556:5432"
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
